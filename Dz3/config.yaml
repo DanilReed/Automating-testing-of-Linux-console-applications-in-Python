@@ -1,0 +1,5 @@
+folder_in: "/home/ub/in/"
+folder_out: "/home/ub/out/"
+folder_ext: "/home/ub/ext/"
+stat_file_path: "/home/ub/PycharmProjects/pythonProject/Test/Dz3/stat.txt"
+archive_type: "7z"
