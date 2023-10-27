@@ -10,7 +10,7 @@ def ssh_checkout(host, user, passwd, cmd, text, port=22):
     except Exception as e:
         print(f"Ошибка {e}")
         client.close()
-        return None, False  # Вместо True возвращаем False и добавляем None вместо вывода
+        return None, False  
 
     stdin, stdout, stderr = client.exec_command(cmd)
     exit_code = stdout.channel.recv_exit_status()
@@ -18,9 +18,9 @@ def ssh_checkout(host, user, passwd, cmd, text, port=22):
     client.close()
 
     if text in out and exit_code == 0:
-        return out, True  # Вместо True возвращаем вывод и True
+        return out, True  
     else:
-        return out, False  # Вместо False возвращаем вывод и False
+        return out, False  
 
 
 def ssh_getout(host, user, passwd, cmd, port=22):
